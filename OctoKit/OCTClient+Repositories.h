@@ -199,4 +199,11 @@
 // Returns a signal of zero or one OCTCommitCombinedStatus.
 - (RACSignal *)fetchCommitCombinedStatusForRepositoryWithName:(NSString *)name owner:(NSString *)owner reference:(NSString *)reference;
 
+// Fetches hooks for the given `repository`.
+//
+// repository  - The repository to fetch from.
+//
+// Returns a signal of zero or more OCTHook sub-class instances.
+- (RACSignal *)fetchHooksForRepository:(OCTRepository *)repository;
+
 @end
